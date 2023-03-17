@@ -19,6 +19,7 @@ namespace MauiChart.Drawables
 				else
 					canvas.StrokeColor = Colors.Red;
 
+				canvas.StrokeSize = 3;
 				canvas.DrawLine(lines[i].start, lines[i].end);
 
 			}
