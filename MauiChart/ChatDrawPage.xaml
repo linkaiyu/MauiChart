@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawables="clr-namespace:MauiChart.Drawables"
+             x:Class="MauiChart.ChatDrawPage"
+             Title="ChatDrawPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <ContentPage.Resources>
+                <drawables:ChartDrawable x:Key="drawable" />
+            </ContentPage.Resources>
+
+            <VerticalStackLayout>
+                <GraphicsView Drawable="{StaticResource drawable}"
+                       x:Name="graphicsView"        
+                      HeightRequest="500"
+                      WidthRequest="400" />
+            </VerticalStackLayout>
+
+            <Button Text="Draw Chart" Clicked="btnDraw_Clicked"
+                    x:Name="btnDraw" />
+
+
+        </VerticalStackLayout>
+
+
+    </ScrollView>
+
+</ContentPage>
